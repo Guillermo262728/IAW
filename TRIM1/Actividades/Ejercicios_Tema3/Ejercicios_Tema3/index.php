@@ -19,7 +19,7 @@
                 $activeClass = $i === 1 ? 'active' : '';
                 echo "<li class='nav-item'>
                         <a class='nav-link $activeClass' data-bs-toggle='tab' href='#ejercicio$i' role='tab' aria-controls='ejercicio$i' aria-selected='" . ($i === 1 ? "true" : "false") . "' data-tab='$i'>Ejercicio $i</a>
-                      </li>";
+                    </li>";
             }
             ?>
         </ul>
