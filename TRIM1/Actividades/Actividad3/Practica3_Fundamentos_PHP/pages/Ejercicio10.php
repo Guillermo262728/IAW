@@ -10,19 +10,17 @@
     <h2>Resultados de las Operaciones</h2>
 
     <?php
-        // Ejercicio 10: Calculadora I
-        // Declaración de las variables numéricas requeridas
+        // Declaramos las dos variables
         $x = 166;
         $y = 999;
 
-        // Cálculo de las operaciones matemáticas básicas
+        // Calculamos las operaciones
         $suma = $x + $y;
         $resta = $x - $y;
         $multiplicacion = $x * $y;
         $division = $x / $y;
     ?>
 
-    <!-- Presentación de los valores y resultados en una tabla HTML -->
     <table>
         <thead>
             <tr>
@@ -58,8 +56,6 @@
         </tbody>
     </table>
 
-    <!-- Botón para volver a la página principal -->
     <a href="../index.html" class="boton_personalizado boton_volver">Volver</a>
 </body>
 </html>
-

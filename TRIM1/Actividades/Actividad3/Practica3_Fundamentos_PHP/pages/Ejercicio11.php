@@ -10,8 +10,7 @@
     <h2>Datos Personales</h2>
 
     <?php
-        // Ejercicio 11: Datos personales
-        // Declaración de variables con datos de ejemplo ficticios
+        // Datos personales de ejemplo
         $nombre = "Alberto";
         $primerApellido = "Cifuentes";
         $segundoApellido = "García";
@@ -20,7 +19,6 @@
         $telefono = "123456789";
     ?>
 
-    <!-- Tabla HTML con los datos personales formateados -->
     <table>
         <tbody>
             <tr>
@@ -50,8 +48,6 @@
         </tbody>
     </table>
 
-    <!-- Botón para volver a la página principal -->
     <a href="../index.html" class="boton_personalizado boton_volver">Volver</a>
 </body>
 </html>
-

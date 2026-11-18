@@ -5,7 +5,6 @@
     <title>Ejercicio 21</title>
     <link rel="stylesheet" type="text/css" href="../estilos/miestilo.css" />
     <style>
-        /* Ajuste de ancho de tabla para visualizar el texto cómodamente */
         table.tabla-dialogo {
             max-width: 900px;
             width: 90%;
@@ -30,31 +29,28 @@
     <h2>Resultados de las Operaciones con Cadenas</h2>
 
     <?php
-        // Ejercicio 21: Juego de palabras
-        // 1. Definición por separado de las intervenciones de Groucho y Chico
+        // Frases de Groucho y Chico
         $groucho = "-Preste mucha atención a la primera cláusula, porque es muy importante. Dice: \"La parte contratante de la primera parte será considerada como... la parte contratante de la primera parte.\" ¿Qué le parece eso? Está genial, ¿eh?";
         $chico = "-No, no sirve para nada.";
 
-        // 2. Mostrar el diálogo completo, uniendo ambas intervenciones separadas por un espacio
+        // Unimos ambas frases
         $dialogoCompleto = $groucho . " " . $chico;
 
-        // 3. Generar una segunda versión sustituyendo la palabra «primera» por «segunda»
+        // Cambiamos 'primera' por 'segunda'
         $dialogoSegundaClausula = str_replace("primera", "segunda", $dialogoCompleto);
 
-        // 4. Posición en la que comienza la intervención de Chico dentro del diálogo completo
+        // Posicion donde empieza Chico
         $posicionChico = strpos($dialogoCompleto, $chico);
 
-        // 5. Cálculo del porcentaje de caracteres de cada interlocutor respecto al total
-        // (sin contar el espacio de separación utilizado para unirlas)
+        // Porcentaje de caracteres de cada uno
         $lenGroucho = strlen($groucho);
         $lenChico = strlen($chico);
-        $totalCaracteres = $lenGroucho + $lenChico;
+        $total = $lenGroucho + $lenChico;
 
-        $porcentajeGroucho = round(($lenGroucho / $totalCaracteres) * 100, 2);
-        $porcentajeChico = round(($lenChico / $totalCaracteres) * 100, 2);
+        $porcentajeGroucho = round(($lenGroucho / $total) * 100, 2);
+        $porcentajeChico = round(($lenChico / $total) * 100, 2);
     ?>
 
-    <!-- 6. Presentación de todos los resultados en una tabla HTML -->
     <table class="tabla-dialogo">
         <thead>
             <tr>
@@ -94,8 +90,6 @@
         </tbody>
     </table>
 
-    <!-- Botón para volver a la página principal -->
     <a href="../index.html" class="boton_personalizado boton_volver">Volver</a>
 </body>
 </html>
-

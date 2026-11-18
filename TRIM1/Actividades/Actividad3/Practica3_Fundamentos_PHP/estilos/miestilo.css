@@ -50,6 +50,11 @@ body {
   text-align: center;
   color: whitesmoke;
   background-image: url("../imagenes/elefante.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
 }
 

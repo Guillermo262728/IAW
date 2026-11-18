@@ -10,24 +10,16 @@
     <h2>Resultados de las operaciones</h2>
 
     <?php
-        // Ejercicio 19: Calculadora II
-        // Recibe mediante GET los parámetros num1, num2 y num3.
-        // Se establecen valores por defecto (3, 4, 5) en caso de no especificarse por URL
-        $param1 = isset($_GET['num1']) ? $_GET['num1'] : 3;
-        $param2 = isset($_GET['num2']) ? $_GET['num2'] : 4;
-        $param3 = isset($_GET['num3']) ? $_GET['num3'] : 5;
+        // Recogemos los parametros por GET o usamos valores por defecto
+        $num1 = isset($_GET['num1']) ? $_GET['num1'] : 3;
+        $num2 = isset($_GET['num2']) ? $_GET['num2'] : 4;
+        $num3 = isset($_GET['num3']) ? $_GET['num3'] : 5;
 
-        // Comprobación de que los tres parámetros sean numéricos
-        if (!is_numeric($param1) || !is_numeric($param2) || !is_numeric($param3)) {
-            echo "<p style='color: #ffb4b4; font-size: 18px;'>Error: Todos los parámetros deben ser números válidos.</p>";
-            echo "<p>Ejemplo de llamada: <code>Ejercicio19.php?num1=3&num2=4&num3=5</code></p>";
+        // Validamos que sean numeros
+        if (!is_numeric($num1) || !is_numeric($num2) || !is_numeric($num3)) {
+            echo "<p style='color: red;'>Debes introducir 3 números por URL (num1, num2 y num3).</p>";
         } else {
-            // Conversión numérica
-            $num1 = $param1 + 0;
-            $num2 = $param2 + 0;
-            $num3 = $param3 + 0;
-
-            // Cálculos matemáticos
+            // Operaciones
             $suma = $num1 + $num2 + $num3;
             $producto = $num1 * $num2 * $num3;
             $media = $suma / 3;
@@ -35,7 +27,6 @@
             $minimo = min($num1, $num2, $num3);
     ?>
 
-    <!-- Tabla HTML con los resultados de las operaciones -->
     <table>
         <thead>
             <tr>
@@ -83,8 +74,6 @@
         }
     ?>
 
-    <!-- Botón para volver a la página principal -->
     <a href="../index.html" class="boton_personalizado boton_volver">Volver</a>
 </body>
 </html>
-
